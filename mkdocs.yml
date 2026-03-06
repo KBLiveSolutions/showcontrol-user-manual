@@ -3,17 +3,7 @@ site_description: Operator Manual for ShowControl
 site_author: KBLiveSolutions
 
 theme:
-  name: material
-  palette:
-    primary: deep purple
-    accent: amber
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - search.highlight
-    - content.code.copy
-    - toc.integrate
+  name: readthedocs
 
 nav:
   - Home: index.md
