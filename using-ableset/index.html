@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../using-user-defined-controls/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>ShowControl Manual Style Guide - Show Control Documentation</title>
+        <title>Using Ableset - Show Control Documentation</title>
       
     
     
@@ -64,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#showcontrol-manual-style-guide" class="md-skip">
+        <a href="#tbd" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ShowControl Manual Style Guide
+              Using Ableset
             
           </span>
         </div>
@@ -301,10 +305,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../using-ableset/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -320,6 +333,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -371,135 +385,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-audience-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) Audience model
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-page-structure-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2) Page structure rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-responsibility-boundaries-mandatory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3) Responsibility boundaries (mandatory)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-terminology-strict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4) Terminology (strict)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-writing-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5) Writing style
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-formatting-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6) Formatting standards
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-operational-safety-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7) Operational safety content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-troubleshooting-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8) Troubleshooting design
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-versioning-and-change-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9) Versioning and change control
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-quality-checklist-before-publish" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10) Quality checklist before publish
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-recommended-page-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11) Recommended page set
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -515,142 +400,7 @@
 
 
 
-<h1 id="showcontrol-manual-style-guide">ShowControl Manual Style Guide<a class="headerlink" href="#showcontrol-manual-style-guide" title="Permanent link">&para;</a></h1>
-<p>This guide defines how to write and maintain user documentation for ShowControl in a live-performance context.</p>
-<p>Scope:
-- Hardware controller
-- Desktop application
-- Ableton/script dependency
-- Optional Ableset integration</p>
-<hr />
-<h2 id="1-audience-model">1) Audience model<a class="headerlink" href="#1-audience-model" title="Permanent link">&para;</a></h2>
-<p>Every page must be written for one primary audience:</p>
-<ul>
-<li><strong>Performer</strong>: fast, minimal, action-first</li>
-<li><strong>Operator/Tech</strong>: precise, diagnostic, system-level</li>
-</ul>
-<p>If both are needed, split content into separate sections or pages.</p>
-<hr />
-<h2 id="2-page-structure-rules">2) Page structure rules<a class="headerlink" href="#2-page-structure-rules" title="Permanent link">&para;</a></h2>
-<p>Preferred section order:</p>
-<ol>
-<li><strong>Goal</strong></li>
-<li><strong>Preconditions</strong></li>
-<li><strong>Steps</strong></li>
-<li><strong>Expected result</strong></li>
-<li><strong>Failure path</strong> (link to troubleshooting)</li>
-</ol>
-<p>For reference pages, use:</p>
-<ol>
-<li><strong>Purpose</strong></li>
-<li><strong>Inputs/Outputs</strong></li>
-<li><strong>Limits/Defaults</strong></li>
-<li><strong>Operational notes</strong></li>
-</ol>
-<hr />
-<h2 id="3-responsibility-boundaries-mandatory">3) Responsibility boundaries (mandatory)<a class="headerlink" href="#3-responsibility-boundaries-mandatory" title="Permanent link">&para;</a></h2>
-<p>When documenting a feature, explicitly state ownership:</p>
-<ul>
-<li><strong>Hardware</strong></li>
-<li><strong>ShowControl app</strong></li>
-<li><strong>Ableton/script</strong></li>
-<li><strong>Ableset</strong></li>
-</ul>
-<p>Avoid vague phrasing like “the system does X” without naming the layer.</p>
-<hr />
-<h2 id="4-terminology-strict">4) Terminology (strict)<a class="headerlink" href="#4-terminology-strict" title="Permanent link">&para;</a></h2>
-<p>Use these canonical terms only:</p>
-<ul>
-<li><strong>Song</strong>: setlist song entry</li>
-<li><strong>Section</strong>: section inside a Song</li>
-<li><strong>User page</strong>: one configurable control page</li>
-<li><strong>Scenes/Markers source</strong>: left source list in Setlist</li>
-</ul>
-<p>Do not alternate with synonyms inside docs.</p>
-<hr />
-<h2 id="5-writing-style">5) Writing style<a class="headerlink" href="#5-writing-style" title="Permanent link">&para;</a></h2>
-<p>Target style: <strong>technical/operator oriented</strong>.</p>
-<ul>
-<li>concise, direct, imperative</li>
-<li>no marketing language</li>
-<li>no ambiguous words (“maybe”, “probably”) in procedures</li>
-<li>short paragraphs and dense signal</li>
-</ul>
-<p>Good:
-- “Set IP and port, then press Send.”</p>
-<p>Avoid:
-- “You might want to check network settings if needed.”</p>
-<hr />
-<h2 id="6-formatting-standards">6) Formatting standards<a class="headerlink" href="#6-formatting-standards" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Use <code>##</code> for major sections, <code>###</code> for substeps</li>
-<li>Use checklists for pre-show/showday tasks</li>
-<li>Use compact tables for mapping/reference data</li>
-<li>Use horizontal rules (<code>---</code>) between major blocks</li>
-<li>Keep one task per numbered step</li>
-</ul>
-<p>For in-app docs navigation:
-- subsection labels must match heading text exactly where possible</p>
-<hr />
-<h2 id="7-operational-safety-content">7) Operational safety content<a class="headerlink" href="#7-operational-safety-content" title="Permanent link">&para;</a></h2>
-<p>Any live-critical page should include:</p>
-<ul>
-<li><strong>What to verify before show</strong></li>
-<li><strong>What not to change mid-show</strong></li>
-<li><strong>Fallback sequence</strong></li>
-<li><strong>Recovery order</strong></li>
-</ul>
-<p>If a section can break show flow, add an explicit warning note.</p>
-<hr />
-<h2 id="8-troubleshooting-design">8) Troubleshooting design<a class="headerlink" href="#8-troubleshooting-design" title="Permanent link">&para;</a></h2>
-<p>Troubleshooting must be symptom-first:</p>
-<ul>
-<li>“Controller not detected”</li>
-<li>“No Scenes/Markers shown”</li>
-<li>“Wrong Song/Section triggered”</li>
-</ul>
-<p>Each symptom entry should include:</p>
-<ol>
-<li>Fast checks (&lt;= 60s)</li>
-<li>Deep checks</li>
-<li>Escalation/restart order</li>
-</ol>
-<hr />
-<h2 id="9-versioning-and-change-control">9) Versioning and change control<a class="headerlink" href="#9-versioning-and-change-control" title="Permanent link">&para;</a></h2>
-<p>For every doc update:</p>
-<ul>
-<li>keep terminology stable</li>
-<li>update submenu anchors if headings changed</li>
-<li>verify links in Info tab navigation</li>
-<li>commit with explicit scope (<code>docs(...)</code>)</li>
-</ul>
-<p>When large rewrites happen:
-- keep a dated backup snapshot of prior docs</p>
-<hr />
-<h2 id="10-quality-checklist-before-publish">10) Quality checklist before publish<a class="headerlink" href="#10-quality-checklist-before-publish" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[ ] Audience is clear</li>
-<li>[ ] Preconditions are explicit</li>
-<li>[ ] Steps are executable as written</li>
-<li>[ ] Expected results are measurable</li>
-<li>[ ] Failure path is present</li>
-<li>[ ] Terminology is consistent</li>
-<li>[ ] Submenu anchors match headings</li>
-<li>[ ] No stale defaults/values</li>
-</ul>
-<hr />
-<h2 id="11-recommended-page-set">11) Recommended page set<a class="headerlink" href="#11-recommended-page-set" title="Permanent link">&para;</a></h2>
-<p>Minimum operational doc set:</p>
-<ul>
-<li><code>index.md</code> (entry + scope)</li>
-<li><code>quickstart.md</code> (performer path)</li>
-<li><code>showday-checklist.md</code> (operator checklist)</li>
-<li><code>application.md</code> (UI workflows)</li>
-<li><code>hardware.md</code> (physical + IO)</li>
-<li><code>ableset.md</code> (integration patterns)</li>
-<li><code>troubleshooting.md</code> (symptom-first)</li>
-<li><code>STYLEGUIDE.md</code> (this document)</li>
-</ul>
+<h1 id="tbd">TBD<a class="headerlink" href="#tbd" title="Permanent link">&para;</a></h1>
 
 
 
