@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="KBLiveSolutions" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Using user-defined controls - ShowControl Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Using user-defined controls";
+        var mkdocs_page_input_path = "using-user-defined-controls.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ShowControl Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../connecting-the-device/">Installation / connection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../using-setlists/">Using setlists</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Using user-defined controls</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preconditions">Preconditions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-configure-user-pages">1) Configure User pages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-validation-protocol">2) Validation protocol</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#verify">Verify</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-performance-safety-rules">3) Performance safety rules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#if-control-behavior-mismatches">If control behavior mismatches</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start (Performer)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../showday-checklist/">Show Day Checklist</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ableset/">Using Ableset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../STYLEGUIDE/">Style Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ShowControl Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Using user-defined controls</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-user-defined-controls">Using User-Defined Controls<a class="headerlink" href="#using-user-defined-controls" title="Permanent link">&para;</a></h1>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Configure and validate User pages so critical live actions are reliable under pressure.</p>
+<h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Device connected</li>
+<li>Setlist baseline already validated</li>
+</ul>
+<hr />
+<h2 id="1-configure-user-pages">1) Configure User pages<a class="headerlink" href="#1-configure-user-pages" title="Permanent link">&para;</a></h2>
+<p>For each active <strong>User page</strong>:</p>
+<ul>
+<li>map primary button actions</li>
+<li>map shifted actions</li>
+<li>map encoder turn/push</li>
+<li>map pedal behavior</li>
+<li>set display lines if needed</li>
+</ul>
+<hr />
+<h2 id="2-validation-protocol">2) Validation protocol<a class="headerlink" href="#2-validation-protocol" title="Permanent link">&para;</a></h2>
+<p>For each User page, test in this order:</p>
+<ol>
+<li>Transport-critical actions</li>
+<li>Song navigation actions</li>
+<li>Section-related actions</li>
+<li>Shift-layer actions</li>
+<li>Encoder and pedal actions</li>
+</ol>
+<h3 id="verify">Verify<a class="headerlink" href="#verify" title="Permanent link">&para;</a></h3>
+<ul>
+<li>each action triggers intended function only</li>
+<li>no overlapping/conflicting mappings</li>
+<li>shifted layer behaves consistently</li>
+</ul>
+<hr />
+<h2 id="3-performance-safety-rules">3) Performance safety rules<a class="headerlink" href="#3-performance-safety-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>do not remap critical controls during active playback unless emergency</li>
+<li>prefer simplified mappings for show-critical actions</li>
+<li>keep one known-safe recovery action per User page</li>
+</ul>
+<hr />
+<h2 id="if-control-behavior-mismatches">If control behavior mismatches<a class="headerlink" href="#if-control-behavior-mismatches" title="Permanent link">&para;</a></h2>
+<p>Go to <a href="../troubleshooting/#4-user-page-actions-mismatch">Troubleshooting</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../using-setlists/" class="btn btn-neutral float-left" title="Using setlists"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../quickstart/" class="btn btn-neutral float-right" title="Quick Start (Performer)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../using-setlists/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../quickstart/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
