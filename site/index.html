@@ -1,440 +1,179 @@
 <!DOCTYPE html>
-
-<html data-bs-theme="light" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="None" name="description"/>
-<link href="img/favicon.ico" rel="shortcut icon"/>
-<title>Show Control</title>
-<link href="css/bootstrap.min.css" rel="stylesheet"/>
-<link href="css/fontawesome.min.css" rel="stylesheet"/>
-<link href="css/brands.min.css" rel="stylesheet"/>
-<link href="css/solid.min.css" rel="stylesheet"/>
-<link href="css/v4-font-face.min.css" rel="stylesheet"/>
-<link href="css/base.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
-<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-<link href="index.pdf" rel="alternate" title="PDF Export" type="application/pdf"/></head>
-<body class="homepage">
-<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-<a class="navbar-brand" href=".">Show Control</a>
-<!-- Expander button -->
-<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<!-- Expanded navigation -->
-<div class="navbar-collapse collapse" id="navbar-collapse">
-<!-- Main navigation -->
-<ul class="nav navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="hardware/">Hardware Controller</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="application/">Application</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="ableset/">Ableset</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="troubleshooting/">Troubleshooting</a>
-</li>
-</ul>
-<ul class="nav navbar-nav ms-md-auto">
-</ul>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Operator Manual for ShowControl" /><meta name="author" content="KBLiveSolutions" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>ShowControl Documentation</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> ShowControl Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#recommended-reading-order">Recommended reading order</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supporting-pages">Supporting pages</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="connecting-the-device/">Installation / connection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="using-setlists/">Using setlists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="using-user-defined-controls/">Using user-defined controls</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="quickstart/">Quick Start (Performer)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="showday-checklist/">Show Day Checklist</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ableset/">Using Ableset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="STYLEGUIDE/">Style Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">ShowControl Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
 </div>
-</div>
-<div class="container">
-<div class="row">
-<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-<div class="navbar-header">
-<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
-<span class="fa fa-angle-down"></span>
-</button>
-</div>
-<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#show-control">Show Control</a>
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#introduction">Introduction</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#system-overview">System Overview</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#installation">Installation</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#hardware-setup">Hardware Setup</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#osc-midi-communication">OSC &amp; MIDI Communication</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#configuration">Configuration</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-</ul>
-</li>
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#hardware-controller">Hardware Controller</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#application">Application</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#using-ableset">Using Ableset</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#troubleshooting">Troubleshooting</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-</ul>
-</div>
-</div></div>
-<div class="col-md-9" role="main">
-<h1 id="show-control">Show Control</h1>
-<h2 id="introduction">Introduction</h2>
-<p><strong>ShowControl</strong> is an advanced MIDI control system designed for professional live performance control of Ableton Live and other DAWs. It consists of three main components:</p>
-<ul>
-<li><strong>ShowControl Firmware</strong> - Runs on Raspberry Pi Pico hardware controller</li>
-<li><strong>ShowControl App</strong> - Desktop application (Electron) for configuration and monitoring</li>
-<li><strong>ShowControl Script</strong> - Ableton Live Remote Script for DAW integration</li>
-</ul>
-<h3 id="key-features">Key Features</h3>
-<ul>
-<li><strong>Bidirectional MIDI/OSC communication</strong> with DAWs</li>
-<li><strong>Customizable user pages</strong> with buttons, encoders, and pedals</li>
-<li><strong>Setlist management</strong> for live performances</li>
-<li><strong>Ethernet connectivity</strong> for reliable OSC communication</li>
-<li><strong>LED feedback</strong> with customizable colors</li>
-<li><strong>TFT display</strong> for visual feedback</li>
-</ul>
-<hr/>
-<h2 id="system-overview">System Overview</h2>
-<h3 id="architecture">Architecture</h3>
-<pre><code>┌─────────────────┐     OSC/MIDI      ┌─────────────────┐
-│  ShowControl    │◄────────────────► │   Ableton Live  │
-│  Hardware       │                   │  (with Script)  │
-└─────────────────┘                   └─────────┬───────┘
-                                                │ USB/Ethernet   
-                            ◄─────────────────────────────────────►
-                    ┌─────────────────┐                   ┌─────────────────┐
-                    │  ShowControl    │                   │  Ableset        │
-                    │  Desktop App    │                   │  Desktop App    │
-                    └─────────────────┘                   └─────────────────┘
-</code></pre>
-<h3 id="hardware-components">Hardware Components</h3>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>6 Buttons</strong></td>
-<td>5 Assignable control buttons with LED feedback + Shift / Lock Button</td>
-</tr>
-<tr>
-<td><strong>Rotary Encoder</strong></td>
-<td>Turn + push actions</td>
-</tr>
-<tr>
-<td><strong>2 Pedal Inputs</strong></td>
-<td>For expression pedals or footswitches</td>
-</tr>
-<tr>
-<td><strong>4'' Display</strong></td>
-<td>Status and information display</td>
-</tr>
-<tr>
-<td><strong>Ethernet Port</strong></td>
-<td>Network connectivity for OSC</td>
-</tr>
-<tr>
-<td><strong>MIDI USB Host Port</strong></td>
-<td>To connect additionnal MIDI controlers</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="installation">Installation</h2>
-<h3 id="firmware-installation">Firmware Installation</h3>
-<h3 id="desktop-app-installation">Desktop App Installation</h3>
-<h3 id="ableton-live-script-installation">Ableton Live Script Installation</h3>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="showcontrol-operator-manual">ShowControl Operator Manual<a class="headerlink" href="#showcontrol-operator-manual" title="Permanent link">&para;</a></h1>
+<p>This manual is organized around the three core operator tasks:</p>
 <ol>
-<li>Copy the <code>__showcontrol</code> folder to:</li>
-<li><strong>macOS</strong>: <code>~/Music/Ableton/User Library/Remote Scripts/</code></li>
-<li><strong>Windows</strong>: <code>\Users\[username]\Documents\Ableton\User Library\Remote Scripts\</code></li>
-<li>In Ableton Live, go to <strong>Preferences &gt; Link/Tempo/MIDI</strong></li>
-<li>Select <strong>ShowControl</strong> as a Control Surface</li>
+<li><a href="connecting-the-device/">Installation / connection</a></li>
+<li><a href="using-setlists/">Using setlists</a></li>
+<li><a href="using-user-defined-controls/">Using user-defined controls</a></li>
 </ol>
-<hr/>
-<h2 id="hardware-setup">Hardware Setup</h2>
-<h3 id="network-configuration">Network Configuration</h3>
-<p>ShowControl supports <strong>Static IP</strong> configuration.</p>
-<p>Configure manually via the desktop app:
-- <strong>IP Address</strong>: Device IP (e.g., 192.168.1.100)
-- <strong>Port</strong>: OSC port (default: 42050)</p>
-<p>Configure on the controller in the Settings Menu</p>
-<h3 id="midi-setup">MIDI Setup</h3>
-<p>ShowControl appears as a USB MIDI device when connected via USB. It supports:
-- <strong>Note messages</strong> (0-127)
-- <strong>Control Change (CC)</strong> messages (0-127)
-- <strong>Program Change (PC)</strong> messages
-- <strong>SysEx</strong> messages for configuration</p>
-<hr/>
-<hr/>
-<h2 id="osc-midi-communication">OSC &amp; MIDI Communication</h2>
-<h3 id="osc-messages">OSC Messages</h3>
-<h4 id="incoming-messages-to-ableton-live">Incoming Messages (to Ableton Live)</h4>
-<table>
-<thead>
-<tr>
-<th>Address</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/live/test</code></td>
-<td>Connection test</td>
-</tr>
-<tr>
-<td><code>/live/api/reload</code></td>
-<td>Reload script code</td>
-</tr>
-<tr>
-<td><code>/showcontrol/ping</code></td>
-<td>Connection ping</td>
-</tr>
-</tbody>
-</table>
-<h4 id="outgoing-messages-from-ableton-live">Outgoing Messages (from Ableton Live)</h4>
-<table>
-<thead>
-<tr>
-<th>Address</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/fromLive/ping</code></td>
-<td>Ping response</td>
-</tr>
-<tr>
-<td><code>/fromLive/newSetLoaded</code></td>
-<td>New set loaded</td>
-</tr>
-<tr>
-<td><code>/live/error</code></td>
-<td>Error messages</td>
-</tr>
-</tbody>
-</table>
-<h3 id="osc-ports">OSC Ports</h3>
-<table>
-<thead>
-<tr>
-<th>Port</th>
-<th>Direction</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Listen</td>
-<td>Incoming</td>
-<td>42050</td>
-</tr>
-<tr>
-<td>Response</td>
-<td>Outgoing</td>
-<td>42051</td>
-</tr>
-</tbody>
-</table>
-<h3 id="midi-message-types">MIDI Message Types</h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Range</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Note</td>
-<td>0-127</td>
-<td>Button triggers</td>
-</tr>
-<tr>
-<td>CC</td>
-<td>0-127</td>
-<td>Continuous controls</td>
-</tr>
-<tr>
-<td>PC</td>
-<td>0-127</td>
-<td>Program changes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="led-color-feedback">LED Color Feedback</h3>
-<p>Buttons provide LED color feedback based on Ableton's color palette (64 colors). Colors are automatically synchronized with assigned functions.</p>
-<hr/>
-<h2 id="configuration">Configuration</h2>
-<h3 id="desktop-app-configuration">Desktop App Configuration</h3>
-<h4 id="device-settings-tab">Device Settings Tab</h4>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LED Brightness</td>
-<td>0-10 scale</td>
-</tr>
-<tr>
-<td>Display Brightness</td>
-<td>0-100%</td>
-</tr>
-<tr>
-<td>Night Mode</td>
-<td>Dimmed display mode</td>
-</tr>
-<tr>
-<td>DHCP Enable</td>
-<td>Auto/manual IP</td>
-</tr>
-<tr>
-<td>Manual IP</td>
-<td>Static IP configuration</td>
-</tr>
-<tr>
-<td>OSC Port</td>
-<td>Network port (1000-65535)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="user-mode-configuration">User Mode Configuration</h4>
-<ol>
-<li>Select <strong>User tab</strong> in the app</li>
-<li>Choose user mode (1-5) from dropdown</li>
-<li>Click on buttons to assign actions</li>
-<li>Use <strong>Shift</strong> to configure shifted layer</li>
-<li>Configure encoder turn/push actions</li>
-<li>Set display line content</li>
-</ol>
-<h4 id="saving-configuration">Saving Configuration</h4>
+<hr />
+<h2 id="recommended-reading-order">Recommended reading order<a class="headerlink" href="#recommended-reading-order" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>To device</strong>: Changes are sent via MIDI SysEx</li>
-<li><strong>To file</strong>: Export/import JSON configuration</li>
-<li><strong>Persistent storage</strong>: Device saves to internal flash (LittleFS)</li>
+<li>First setup: <strong>Installation / connection</strong></li>
+<li>Show preparation: <strong>Using setlists</strong></li>
+<li>Performance control setup: <strong>Using user-defined controls</strong></li>
 </ul>
-<h3 id="configuration-file-structure">Configuration File Structure</h3>
-<p>Configuration is stored in data.json:</p>
-<pre><code class="language-json">{
-  "options": {
-    "useDHCP": true,
-    "nightMode": false,
-    "selectedPage": 0,
-    "userPagesAmount": 3,
-    "ledBrightness": 5,
-    "displayBrightness": 80,
-    "port": 42050,
-    "manualIP": [192, 168, 1, 100]
-  },
-  "pages": [
-    {
-      "controls": [...],
-      "encoder": [...],
-      "display": [...]
-    }
-  ]
-}
-</code></pre>
-<h1 id="hardware-controller">Hardware Controller</h1>
-<h1 id="application">Application</h1>
-<h1 id="using-ableset">Using Ableset</h1>
-<h1 id="troubleshooting">Troubleshooting</h1>
-<hr/></div>
-</div>
-</div>
-<footer class="col-md-12">
-<hr/>
-<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+<hr />
+<h2 id="supporting-pages">Supporting pages<a class="headerlink" href="#supporting-pages" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="quickstart/">Quick Start (Performer)</a></li>
+<li><a href="showday-checklist/">Show Day Checklist</a></li>
+<li><a href="ableset/">Using Ableset</a></li>
+<li><a href="troubleshooting/">Troubleshooting</a></li>
+<li><a href="STYLEGUIDE/">Style Guide</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="connecting-the-device/" class="btn btn-neutral float-right" title="Installation / connection">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-<script src="js/base.js"></script>
-<div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="connecting-the-device/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-<div class="modal-body">
-<table class="table">
-<thead>
-<tr>
-<th style="width: 20%;">Keys</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="help shortcut"><kbd>?</kbd></td>
-<td>Open this help</td>
-</tr>
-<tr>
-<td class="next shortcut"><kbd>n</kbd></td>
-<td>Next page</td>
-</tr>
-<tr>
-<td class="prev shortcut"><kbd>p</kbd></td>
-<td>Previous page</td>
-</tr>
-<tr>
-<td class="search shortcut"><kbd>s</kbd></td>
-<td>Search</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="modal-footer">
-</div>
-</div>
-</div>
-</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
 </body>
 </html>
+
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-01-30 11:14:30.992932+00:00
+Build Date UTC : 2026-03-09 11:57:14.501039+00:00
 -->

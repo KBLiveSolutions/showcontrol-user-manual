@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="KBLiveSolutions" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Using Ableset - ShowControl Documentation</title>
+    <title>Using setlists - ShowControl Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Using Ableset";
-        var mkdocs_page_input_path = "ableset.md";
+        var mkdocs_page_name = "Using setlists";
+        var mkdocs_page_input_path = "using-setlists.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,8 +47,30 @@
                 <li class="toctree-l1"><a class="reference internal" href="../connecting-the-device/">Installation / connection</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../using-setlists/">Using setlists</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Using setlists</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preconditions">Preconditions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-build-setlist-structure">1) Build setlist structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#verify">Verify</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-refine-and-validate">2) Refine and validate</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#verify_1">Verify</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-live-operation-guidance">3) Live operation guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#if-setlist-behavior-is-wrong">If setlist behavior is wrong</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -63,20 +85,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../showday-checklist/">Show Day Checklist</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Using Ableset</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#responsibility-split">Responsibility split</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#operating-patterns">Operating patterns</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#preconditions">Preconditions</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#validation-sequence">Validation sequence</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ableset/">Using Ableset</a>
                 </li>
               </ul>
               <ul>
@@ -101,7 +111,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Using Ableset</li>
+      <li class="breadcrumb-item active">Using setlists</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -110,65 +120,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="using-ableset">Using Ableset<a class="headerlink" href="#using-ableset" title="Permanent link">&para;</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Define how ShowControl is operated when Ableset participates in the control/playback chain.</p>
-<hr />
-<h2 id="responsibility-split">Responsibility split<a class="headerlink" href="#responsibility-split" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>ShowControl hardware</strong>: physical control surface input</li>
-<li><strong>ShowControl app</strong>: mappings, setlist UI, operational state</li>
-<li><strong>Ableton/script</strong>: musical timing and source context</li>
-<li><strong>Ableset</strong>: orchestration and external show logic</li>
-</ul>
-<hr />
-<h2 id="operating-patterns">Operating patterns<a class="headerlink" href="#operating-patterns" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Primary logic owner</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ableton-first</td>
-<td>Ableton locators/markers</td>
-<td>Use Scenes/Markers source in Setlist tab</td>
-</tr>
-<tr>
-<td>Ableset-first</td>
-<td>Ableset orchestration</td>
-<td>Keep ShowControl as physical operator layer</td>
-</tr>
-</tbody>
-</table>
-<hr />
+                <h1 id="using-setlists">Using Setlists<a class="headerlink" href="#using-setlists" title="Permanent link">&para;</a></h1>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Create and operate a deterministic Song/Section structure for live performance.</p>
 <h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Network topology known and stable</li>
-<li>Correct app/script instances loaded</li>
-<li>Setlist ownership decided (Ableton-first vs Ableset-first)</li>
+<li>Device connected and stable</li>
+<li>Source context available (Scenes/Markers or equivalent workflow)</li>
 </ul>
 <hr />
-<h2 id="validation-sequence">Validation sequence<a class="headerlink" href="#validation-sequence" title="Permanent link">&para;</a></h2>
+<h2 id="1-build-setlist-structure">1) Build setlist structure<a class="headerlink" href="#1-build-setlist-structure" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Confirm connection path (USB/ETH).</li>
-<li>Confirm Song order and Section navigation.</li>
-<li>Validate Shift-layer controls.</li>
-<li>Validate deterministic jump behavior.</li>
-<li>Validate fallback behavior for path loss.</li>
+<li>Open <strong>Setlist</strong> tab.</li>
+<li>Select source (<strong>Scenes</strong> or <strong>Markers</strong>).</li>
+<li>Create/select target setlist.</li>
+<li>Drag content into <strong>Songs</strong>.</li>
+<li>Organize <strong>Sections</strong> inside Songs.</li>
 </ol>
-<p><strong>Expected result</strong>
-- Operator can move Song/Section state predictably under load.</p>
-<p>If not, go to <a href="../troubleshooting/">Troubleshooting</a>.</p>
+<h3 id="verify">Verify<a class="headerlink" href="#verify" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Song order matches show order</li>
+<li>Section boundaries are meaningful for jumps/loops</li>
+</ul>
+<hr />
+<h2 id="2-refine-and-validate">2) Refine and validate<a class="headerlink" href="#2-refine-and-validate" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Reorder Songs/Sections as needed.</li>
+<li>Use undo/redo while editing.</li>
+<li>Review durations and transition points.</li>
+</ul>
+<h3 id="verify_1">Verify<a class="headerlink" href="#verify_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>no duplicate/misplaced Song or Section entries</li>
+<li>navigation is repeatable in rehearsal</li>
+</ul>
+<hr />
+<h2 id="3-live-operation-guidance">3) Live operation guidance<a class="headerlink" href="#3-live-operation-guidance" title="Permanent link">&para;</a></h2>
+<p>During show operation:</p>
+<ul>
+<li>avoid structural edits mid-song</li>
+<li>keep transition actions deterministic</li>
+<li>use known-safe jump points</li>
+</ul>
+<hr />
+<h2 id="if-setlist-behavior-is-wrong">If setlist behavior is wrong<a class="headerlink" href="#if-setlist-behavior-is-wrong" title="Permanent link">&para;</a></h2>
+<p>Go to <a href="../troubleshooting/#3-wrong-songsection-behavior">Troubleshooting</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../showday-checklist/" class="btn btn-neutral float-left" title="Show Day Checklist"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../connecting-the-device/" class="btn btn-neutral float-left" title="Installation / connection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using-user-defined-controls/" class="btn btn-neutral float-right" title="Using user-defined controls">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -191,10 +193,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../showday-checklist/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../connecting-the-device/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../using-user-defined-controls/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

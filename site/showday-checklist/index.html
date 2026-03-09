@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="KBLiveSolutions" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Using Ableset - ShowControl Documentation</title>
+    <title>Show Day Checklist - ShowControl Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Using Ableset";
-        var mkdocs_page_input_path = "ableset.md";
+        var mkdocs_page_name = "Show Day Checklist";
+        var mkdocs_page_input_path = "showday-checklist.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -59,24 +59,24 @@
                 <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start (Performer)</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../showday-checklist/">Show Day Checklist</a>
-                </li>
-              </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Using Ableset</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Show Day Checklist</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a>
+    <li class="toctree-l2"><a class="reference internal" href="#pre-show-t-30-to-t-10">Pre-show (T-30 to T-10)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#responsibility-split">Responsibility split</a>
+    <li class="toctree-l2"><a class="reference internal" href="#line-check-t-10-to-t-2">Line-check (T-10 to T-2)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#operating-patterns">Operating patterns</a>
+    <li class="toctree-l2"><a class="reference internal" href="#during-show-operator-rules">During show (operator rules)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#preconditions">Preconditions</a>
+    <li class="toctree-l2"><a class="reference internal" href="#fallback-protocol">Fallback protocol</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#validation-sequence">Validation sequence</a>
+    <li class="toctree-l2"><a class="reference internal" href="#post-show-capture">Post-show capture</a>
     </li>
     </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ableset/">Using Ableset</a>
                 </li>
               </ul>
               <ul>
@@ -101,7 +101,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Using Ableset</li>
+      <li class="breadcrumb-item active">Show Day Checklist</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -110,65 +110,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="using-ableset">Using Ableset<a class="headerlink" href="#using-ableset" title="Permanent link">&para;</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>Define how ShowControl is operated when Ableset participates in the control/playback chain.</p>
+                <h1 id="show-day-checklist">Show Day Checklist<a class="headerlink" href="#show-day-checklist" title="Permanent link">&para;</a></h1>
+<p>Operator-first checklist for rehearsal and live runtime.</p>
 <hr />
-<h2 id="responsibility-split">Responsibility split<a class="headerlink" href="#responsibility-split" title="Permanent link">&para;</a></h2>
+<h2 id="pre-show-t-30-to-t-10">Pre-show (T-30 to T-10)<a class="headerlink" href="#pre-show-t-30-to-t-10" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>ShowControl hardware</strong>: physical control surface input</li>
-<li><strong>ShowControl app</strong>: mappings, setlist UI, operational state</li>
-<li><strong>Ableton/script</strong>: musical timing and source context</li>
-<li><strong>Ableset</strong>: orchestration and external show logic</li>
+<li>[ ] Controller powered and physically secured</li>
+<li>[ ] USB/ETH route validated</li>
+<li>[ ] App running on correct machine/profile</li>
+<li>[ ] Correct setlist loaded</li>
+<li>[ ] First Song selected</li>
+<li>[ ] Critical mappings validated (transport, Song nav, Shift)</li>
 </ul>
 <hr />
-<h2 id="operating-patterns">Operating patterns<a class="headerlink" href="#operating-patterns" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Primary logic owner</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ableton-first</td>
-<td>Ableton locators/markers</td>
-<td>Use Scenes/Markers source in Setlist tab</td>
-</tr>
-<tr>
-<td>Ableset-first</td>
-<td>Ableset orchestration</td>
-<td>Keep ShowControl as physical operator layer</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Permanent link">&para;</a></h2>
+<h2 id="line-check-t-10-to-t-2">Line-check (T-10 to T-2)<a class="headerlink" href="#line-check-t-10-to-t-2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Network topology known and stable</li>
-<li>Correct app/script instances loaded</li>
-<li>Setlist ownership decided (Ableton-first vs Ableset-first)</li>
+<li>[ ] Play/Stop test</li>
+<li>[ ] Previous/Next Song test</li>
+<li>[ ] Section jump test</li>
+<li>[ ] Shift-layer test</li>
+<li>[ ] Pedal + encoder test</li>
 </ul>
 <hr />
-<h2 id="validation-sequence">Validation sequence<a class="headerlink" href="#validation-sequence" title="Permanent link">&para;</a></h2>
+<h2 id="during-show-operator-rules">During show (operator rules)<a class="headerlink" href="#during-show-operator-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do not change IP/port mid-song.</li>
+<li>Do not remap controls mid-song unless emergency.</li>
+<li>Keep fallback path ready before each transition.</li>
+</ul>
+<hr />
+<h2 id="fallback-protocol">Fallback protocol<a class="headerlink" href="#fallback-protocol" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Confirm connection path (USB/ETH).</li>
-<li>Confirm Song order and Section navigation.</li>
-<li>Validate Shift-layer controls.</li>
-<li>Validate deterministic jump behavior.</li>
-<li>Validate fallback behavior for path loss.</li>
+<li>Verify active transport path (USB/ETH indicator).</li>
+<li>Verify selected setlist and current Song.</li>
+<li>Execute known-safe action (e.g., Play/Stop check).</li>
+<li>If unstable, restart app at safe transition point.</li>
+<li>Re-validate first actionable control before resuming.</li>
 </ol>
-<p><strong>Expected result</strong>
-- Operator can move Song/Section state predictably under load.</p>
-<p>If not, go to <a href="../troubleshooting/">Troubleshooting</a>.</p>
+<hr />
+<h2 id="post-show-capture">Post-show capture<a class="headerlink" href="#post-show-capture" title="Permanent link">&para;</a></h2>
+<ul>
+<li>What failed?</li>
+<li>What took too long?</li>
+<li>Which action needs a dedicated control?</li>
+<li>Which mapping should be simplified?</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../showday-checklist/" class="btn btn-neutral float-left" title="Show Day Checklist"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../quickstart/" class="btn btn-neutral float-left" title="Quick Start (Performer)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ableset/" class="btn btn-neutral float-right" title="Using Ableset">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -191,10 +183,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../showday-checklist/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../quickstart/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../ableset/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

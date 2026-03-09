@@ -1,441 +1,255 @@
 <!DOCTYPE html>
-
-<html data-bs-theme="light" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
-<title>Application - Show Control</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet"/>
-<link href="../css/fontawesome.min.css" rel="stylesheet"/>
-<link href="../css/brands.min.css" rel="stylesheet"/>
-<link href="../css/solid.min.css" rel="stylesheet"/>
-<link href="../css/v4-font-face.min.css" rel="stylesheet"/>
-<link href="../css/base.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
-<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-<link href="application.pdf" rel="alternate" title="PDF Export" type="application/pdf"/></head>
-<body>
-<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-<a class="navbar-brand" href="..">Show Control</a>
-<!-- Expander button -->
-<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<!-- Expanded navigation -->
-<div class="navbar-collapse collapse" id="navbar-collapse">
-<!-- Main navigation -->
-<ul class="nav navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="../hardware/">Hardware Controller</a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="nav-link active" href="./">Application</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../ableset/">Ableset</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../troubleshooting/">Troubleshooting</a>
-</li>
-</ul>
-<ul class="nav navbar-nav ms-md-auto">
-<li class="nav-item">
-<a class="nav-link" href="../hardware/" rel="prev">
-<i class="fa fa-arrow-left"></i> Previous
-                                </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../ableset/" rel="next">
-                                    Next <i class="fa fa-arrow-right"></i>
-</a>
-</li>
-</ul>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="KBLiveSolutions" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Desktop Application - ShowControl Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Desktop Application";
+        var mkdocs_page_input_path = "application.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ShowControl Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../connecting-the-device/">Installation / connection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../using-setlists/">Using setlists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../using-user-defined-controls/">Using user-defined controls</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start (Performer)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../showday-checklist/">Show Day Checklist</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ableset/">Using Ableset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../STYLEGUIDE/">Style Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ShowControl Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Desktop Application</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
 </div>
-</div>
-<div class="container">
-<div class="row">
-<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-<div class="navbar-header">
-<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
-<span class="fa fa-angle-down"></span>
-</button>
-</div>
-<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#show-control-application">Show Control Application</a>
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#setlist-page">Setlist Page</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#setlist-management">Setlist Management</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#performance-page">Performance Page</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#user-page">User Page</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#user-interface">User Interface</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#user-modes">User Modes</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#settings-page">Settings Page</a>
-<ul class="nav flex-column">
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div></div>
-<div class="col-md-9" role="main">
-<h1 id="show-control-application">Show Control Application</h1>
-<h2 id="setlist-page">Setlist Page</h2>
-<h2 id="setlist-management">Setlist Management</h2>
-<h3 id="creating-a-setlist">Creating a Setlist</h3>
-<ol>
-<li>Open the <strong>ShowControl App</strong></li>
-<li>Navigate to the <strong>Setlist</strong> tab</li>
-<li>Add songs using the interface</li>
-<li>Drag and drop to reorder</li>
-<li>Save your setlist</li>
-</ol>
-<h3 id="setlist-features">Setlist Features</h3>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="desktop-application">Desktop Application<a class="headerlink" href="#desktop-application" title="Permanent link">&para;</a></h1>
+<p>The ShowControl desktop app has five main tabs:</p>
 <ul>
-<li><strong>Song navigation</strong> with Next/Previous controls</li>
-<li><strong>Progress tracking</strong> with visual feedback</li>
-<li><strong>Section markers</strong> within songs</li>
-<li><strong>Automatic cue loading</strong></li>
+<li><strong>Info</strong></li>
+<li><strong>Setlist</strong></li>
+<li><strong>Performance</strong></li>
+<li><strong>User</strong></li>
+<li><strong>Settings</strong></li>
 </ul>
-<h3 id="integration-with-ableton-live">Integration with Ableton Live</h3>
-<p>The ShowControl Script communicates setlist information bidirectionally:
-- Send setlist from app to Live
-- Receive current position updates
-- Sync song names and sections</p>
-<h2 id="performance-page">Performance Page</h2>
-<h2 id="user-page">User Page</h2>
-<hr/>
-<h2 id="user-interface">User Interface</h2>
-<h3 id="display-layout">Display Layout</h3>
-<pre><code>┌────────────────────────────────┐
-│ User 1    │ ETH │ 120 BPM      │  ← Status Bar
-├────────────────────────────────┤
-│                                │
-│     [Primary Display Line]     │  ← Configurable
-│                                │
-│     [Secondary Display Line]   │  ← Configurable
-│                                │
-├────────────────────────────────┤
-│ [Btn1] [Btn2] [Btn3] [Btn4] [Btn5] │  ← Button Labels
-└────────────────────────────────┘
-</code></pre>
-<h3 id="display-options">Display Options</h3>
-<p>Each display line can show:</p>
-<table>
-<thead>
-<tr>
-<th>Display Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Scene Name</td>
-<td>Current scene/cue name</td>
-</tr>
-<tr>
-<td>Next Scene Name</td>
-<td>Upcoming scene name</td>
-</tr>
-<tr>
-<td>Track Name</td>
-<td>Selected track name</td>
-</tr>
-<tr>
-<td>Looper Number</td>
-<td>Active looper index</td>
-</tr>
-<tr>
-<td>Variation Number</td>
-<td>Current variation</td>
-</tr>
-<tr>
-<td>Prev/Next Marker Name</td>
-<td>Marker navigation info</td>
-</tr>
-<tr>
-<td>Setlist Song</td>
-<td>Current song in setlist</td>
-</tr>
-<tr>
-<td>Next Setlist Song</td>
-<td>Upcoming song</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="user-modes">User Modes</h2>
-<p>ShowControl supports up to <strong>5 user pages</strong>, each with independent button assignments.</p>
-<h3 id="button-actions">Button Actions</h3>
-<p>Each of the 5 buttons (+ 5 shifted) can be assigned to:</p>
-<h4 id="transport-controls">Transport Controls</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Play/Stop</td>
-<td>Toggle playback</td>
-</tr>
-<tr>
-<td>Play</td>
-<td>Start playback</td>
-</tr>
-<tr>
-<td>Stop</td>
-<td>Stop playback</td>
-</tr>
-<tr>
-<td>Record</td>
-<td>Toggle recording</td>
-</tr>
-<tr>
-<td>Metronome</td>
-<td>Toggle click track</td>
-</tr>
-<tr>
-<td>BPM +1 / BPM -1</td>
-<td>Tempo adjustment</td>
-</tr>
-<tr>
-<td>Rewind / Fast Forward</td>
-<td>Timeline navigation</td>
-</tr>
-</tbody>
-</table>
-<h4 id="arrangement-controls">Arrangement Controls</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jump 1.1.1</td>
-<td>Jump to start</td>
-</tr>
-<tr>
-<td>Arr. Rec</td>
-<td>Arrangement recording</td>
-</tr>
-<tr>
-<td>Arr. Loop</td>
-<td>Toggle arrangement loop</td>
-</tr>
-<tr>
-<td>Prev/Next Marker</td>
-<td>Navigate markers</td>
-</tr>
-<tr>
-<td>Loop to Next Marker</td>
-<td>Set loop to next marker</td>
-</tr>
-</tbody>
-</table>
-<h4 id="session-controls">Session Controls</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Session Rec</td>
-<td>Session recording</td>
-</tr>
-<tr>
-<td>Prev/Next Scene</td>
-<td>Scene navigation</td>
-</tr>
-<tr>
-<td>Launch Scene</td>
-<td>Trigger current scene</td>
-</tr>
-<tr>
-<td>Prev/Next Section</td>
-<td>Section navigation</td>
-</tr>
-<tr>
-<td>Loop Section</td>
-<td>Loop current section</td>
-</tr>
-</tbody>
-</table>
-<h4 id="looper-controls">Looper Controls</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Looper State</td>
-<td>Toggle looper</td>
-</tr>
-<tr>
-<td>Prev/Next Looper</td>
-<td>Navigate loopers</td>
-</tr>
-<tr>
-<td>Clear</td>
-<td>Clear current looper</td>
-</tr>
-<tr>
-<td>Clear All</td>
-<td>Clear all loopers</td>
-</tr>
-</tbody>
-</table>
-<h4 id="custom-midi">Custom MIDI</h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Custom MIDI</td>
-<td>Send custom Note/CC/PC message</td>
-</tr>
-</tbody>
-</table>
-<h3 id="shift-function">Shift Function</h3>
-<p>Press the <strong>Shift</strong> button to access a secondary layer of 5 additional button assignments (buttons 6-10).</p>
-<h3 id="encoder-actions">Encoder Actions</h3>
-<p>The rotary encoder can be assigned to:</p>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>BPM</td>
-<td>Adjust tempo</td>
-</tr>
-<tr>
-<td>Scene Select</td>
-<td>Navigate scenes</td>
-</tr>
-<tr>
-<td>Track Select</td>
-<td>Navigate tracks</td>
-</tr>
-<tr>
-<td>Scroll</td>
-<td>General scrolling</td>
-</tr>
-<tr>
-<td>Selected Parameter</td>
-<td>Adjust selected parameter</td>
-</tr>
-<tr>
-<td>Track Volume/Pan</td>
-<td>Mix controls</td>
-</tr>
-<tr>
-<td>Track Send A/B</td>
-<td>Send levels</td>
-</tr>
-</tbody>
-</table>
-<p>The encoder push button has separate assignable actions.</p>
-<h3 id="pedal-configuration">Pedal Configuration</h3>
-<p>Both pedal inputs support:
-- <strong>Momentary mode</strong> (sends value on press/release)
-- <strong>Toggle mode</strong> (alternates on/off)
-- <strong>Custom MIDI</strong> messages</p>
-<h2 id="settings-page">Settings Page</h2></div>
-</div>
-</div>
-<footer class="col-md-12">
-<hr/>
-<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+<p>The typical workflow is:</p>
+<ol>
+<li>Configure device/network in <strong>Settings</strong></li>
+<li>Build and verify content in <strong>Setlist</strong></li>
+<li>Validate mappings in <strong>User</strong></li>
+<li>Use <strong>Performance</strong> during rehearsal/show</li>
+</ol>
+<hr />
+<h2 id="main-navigation">Main navigation<a class="headerlink" href="#main-navigation" title="Permanent link">&para;</a></h2>
+<p>The top bar is your global control area:</p>
+<ul>
+<li>main tab switching</li>
+<li>USB status indicator</li>
+<li>Ethernet status indicator</li>
+</ul>
+<h3 id="what-to-verify-first">What to verify first<a class="headerlink" href="#what-to-verify-first" title="Permanent link">&para;</a></h3>
+<ul>
+<li>at least one active connection path (USB or ETH)</li>
+<li>expected tab selected for your current task</li>
+</ul>
+<hr />
+<h2 id="setlist-tab">Setlist tab<a class="headerlink" href="#setlist-tab" title="Permanent link">&para;</a></h2>
+<p>Setlist is the primary preparation workspace.</p>
+<h3 id="main-areas">Main areas<a class="headerlink" href="#main-areas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Left column</strong>: source content (Scenes/Markers)</li>
+<li><strong>Right column</strong>: Songs/Sections list</li>
+<li><strong>Top controls</strong>:</li>
+<li>undo/redo</li>
+<li>setlist selector</li>
+<li>new/rename/duplicate/delete setlist</li>
+<li>total setlist duration</li>
+</ul>
+<h3 id="typical-setlist-workflow">Typical setlist workflow<a class="headerlink" href="#typical-setlist-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Choose source (<strong>Scenes</strong> or <strong>Markers</strong>)</li>
+<li>Create or select target setlist</li>
+<li>Drag items into Songs</li>
+<li>Organize Sections within each Song</li>
+<li>Reorder for final show flow</li>
+<li>Validate duration and transitions</li>
+</ol>
+<h3 id="good-practice">Good practice<a class="headerlink" href="#good-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>keep Song names performance-friendly</li>
+<li>keep Sections meaningful for jumps/loops</li>
+<li>use undo/redo often during arrangement</li>
+</ul>
+<hr />
+<h2 id="performance-tab">Performance tab<a class="headerlink" href="#performance-tab" title="Permanent link">&para;</a></h2>
+<p>Performance is a focused live-use view.</p>
+<p>Use it for fast access during rehearsal and show operation when you no longer need deep editing.</p>
+<hr />
+<h2 id="user-tab">User tab<a class="headerlink" href="#user-tab" title="Permanent link">&para;</a></h2>
+<p>User tab defines controller behavior for each <strong>User page</strong>.</p>
+<h3 id="you-can-configure">You can configure<a class="headerlink" href="#you-can-configure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>button actions (normal + shifted)</li>
+<li>encoder turn/push actions</li>
+<li>pedal behavior</li>
+<li>display line content</li>
+</ul>
+<h3 id="recommended-validation-pass">Recommended validation pass<a class="headerlink" href="#recommended-validation-pass" title="Permanent link">&para;</a></h3>
+<p>For each User page used in your show:</p>
+<ol>
+<li>Test critical transport actions</li>
+<li>Test next/previous Song behavior</li>
+<li>Test shifted actions</li>
+<li>Test pedals and encoder</li>
+</ol>
+<hr />
+<h2 id="settings-tab">Settings tab<a class="headerlink" href="#settings-tab" title="Permanent link">&para;</a></h2>
+<p>Settings combines visual hardware settings and network communication settings.</p>
+<h3 id="device-settings">Device settings<a class="headerlink" href="#device-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>LED brightness</li>
+<li>display brightness</li>
+</ul>
+<h3 id="network-settings">Network settings<a class="headerlink" href="#network-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>IP address (4 fields)</li>
+<li>port</li>
+<li>send/apply action</li>
+</ul>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>keep production network values documented</li>
+<li>avoid changing network values during a live section</li>
+</ul>
+<hr />
+<h2 id="info-tab">Info tab<a class="headerlink" href="#info-tab" title="Permanent link">&para;</a></h2>
+<p>Info is the built-in documentation viewer.</p>
+<ul>
+<li>left column: manual navigation</li>
+<li>right pane: current page content</li>
+<li>version label: quick app version reference</li>
+</ul>
+<hr />
+<h2 id="best-practice-flow-before-a-show">Best-practice flow before a show<a class="headerlink" href="#best-practice-flow-before-a-show" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Confirm USB/ETH status</li>
+<li>Confirm Settings values</li>
+<li>Finalize setlist order and durations</li>
+<li>Validate User page mappings</li>
+<li>Rehearse key transitions in Performance</li>
+</ol>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-<script src="../js/base.js"></script>
-<div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
 </div>
-<div class="modal-body">
-<table class="table">
-<thead>
-<tr>
-<th style="width: 20%;">Keys</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="help shortcut"><kbd>?</kbd></td>
-<td>Open this help</td>
-</tr>
-<tr>
-<td class="next shortcut"><kbd>n</kbd></td>
-<td>Next page</td>
-</tr>
-<tr>
-<td class="prev shortcut"><kbd>p</kbd></td>
-<td>Previous page</td>
-</tr>
-<tr>
-<td class="search shortcut"><kbd>s</kbd></td>
-<td>Search</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="modal-footer">
-</div>
-</div>
-</div>
-</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
 </body>
 </html>

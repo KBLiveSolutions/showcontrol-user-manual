@@ -1,290 +1,276 @@
 <!DOCTYPE html>
-
-<html data-bs-theme="light" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
-<title>Troubleshooting - Show Control</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet"/>
-<link href="../css/fontawesome.min.css" rel="stylesheet"/>
-<link href="../css/brands.min.css" rel="stylesheet"/>
-<link href="../css/solid.min.css" rel="stylesheet"/>
-<link href="../css/v4-font-face.min.css" rel="stylesheet"/>
-<link href="../css/base.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
-<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-<link href="troubleshooting.pdf" rel="alternate" title="PDF Export" type="application/pdf"/></head>
-<body>
-<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-<a class="navbar-brand" href="..">Show Control</a>
-<!-- Expander button -->
-<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<!-- Expanded navigation -->
-<div class="navbar-collapse collapse" id="navbar-collapse">
-<!-- Main navigation -->
-<ul class="nav navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="../hardware/">Hardware Controller</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../application/">Application</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="../ableset/">Ableset</a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="nav-link active" href="./">Troubleshooting</a>
-</li>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="KBLiveSolutions" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Troubleshooting - ShowControl Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshooting";
+        var mkdocs_page_input_path = "troubleshooting.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ShowControl Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../connecting-the-device/">Installation / connection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../using-setlists/">Using setlists</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../using-user-defined-controls/">Using user-defined controls</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start (Performer)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../showday-checklist/">Show Day Checklist</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ableset/">Using Ableset</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshooting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-controller-not-detected">1) Controller not detected</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fast-checks">Fast checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deep-checks">Deep checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#escalation">Escalation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-no-scenesmarkers-shown">2) No Scenes/Markers shown</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fast-checks_1">Fast checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deep-checks_1">Deep checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-wrong-songsection-behavior">3) Wrong Song/Section behavior</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fast-checks_2">Fast checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deep-checks_2">Deep checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-user-page-actions-mismatch">4) User page actions mismatch</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fast-checks_3">Fast checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deep-checks_3">Deep checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-network-issues">5) Network issues</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fast-checks_4">Fast checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deep-checks_4">Deep checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recovery-order-safe">Recovery order (safe)</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../STYLEGUIDE/">Style Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ShowControl Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<p>Symptom-first diagnostics for operator use.</p>
+<hr />
+<h2 id="1-controller-not-detected">1) Controller not detected<a class="headerlink" href="#1-controller-not-detected" title="Permanent link">&para;</a></h2>
+<h3 id="fast-checks">Fast checks<a class="headerlink" href="#fast-checks" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Use a data USB cable.</li>
+<li>Try another USB port.</li>
+<li>Restart controller + app.</li>
+<li>Confirm expected MIDI ports appear.</li>
+</ol>
+<h3 id="deep-checks">Deep checks<a class="headerlink" href="#deep-checks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>isolate to minimal rig (controller + single cable + app)</li>
+<li>check for competing MIDI clients</li>
 </ul>
-<ul class="nav navbar-nav ms-md-auto">
-<li class="nav-item">
-<a class="nav-link" href="../ableset/" rel="prev">
-<i class="fa fa-arrow-left"></i> Previous
-                                </a>
-</li>
-<li class="nav-item">
-<a class="nav-link disabled" rel="next">
-                                    Next <i class="fa fa-arrow-right"></i>
-</a>
-</li>
+<h3 id="escalation">Escalation<a class="headerlink" href="#escalation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reboot operator machine if port enumeration is inconsistent</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="row">
-<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-<div class="navbar-header">
-<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
-<span class="fa fa-angle-down"></span>
-</button>
-</div>
-<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#troubleshooting">Troubleshooting</a>
-<ul class="nav flex-column">
-<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#quick-reference">Quick Reference</a>
-<ul class="nav flex-column">
+<hr />
+<h2 id="2-no-scenesmarkers-shown">2) No Scenes/Markers shown<a class="headerlink" href="#2-no-scenesmarkers-shown" title="Permanent link">&para;</a></h2>
+<h3 id="fast-checks_1">Fast checks<a class="headerlink" href="#fast-checks_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Confirm Ableton set is open.</li>
+<li>Confirm remote script is loaded.</li>
+<li>Reconnect after Ableton is fully ready.</li>
+</ol>
+<h3 id="deep-checks_1">Deep checks<a class="headerlink" href="#deep-checks_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>verify correct project context and expected markers/scenes exist</li>
+<li>verify app path is using intended source mode</li>
 </ul>
-</li>
+<hr />
+<h2 id="3-wrong-songsection-behavior">3) Wrong Song/Section behavior<a class="headerlink" href="#3-wrong-songsection-behavior" title="Permanent link">&para;</a></h2>
+<h3 id="fast-checks_2">Fast checks<a class="headerlink" href="#fast-checks_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Verify Song order in Setlist tab.</li>
+<li>Verify Section placement inside each Song.</li>
+<li>Check for misplaced drops/duplicates.</li>
+<li>Use undo/redo to inspect latest operations.</li>
+</ol>
+<h3 id="deep-checks_2">Deep checks<a class="headerlink" href="#deep-checks_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>validate jump logic against rehearsal sequence</li>
+<li>retest with simplified setlist slice</li>
 </ul>
-</li>
+<hr />
+<h2 id="4-user-page-actions-mismatch">4) User page actions mismatch<a class="headerlink" href="#4-user-page-actions-mismatch" title="Permanent link">&para;</a></h2>
+<h3 id="fast-checks_3">Fast checks<a class="headerlink" href="#fast-checks_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Confirm active User page.</li>
+<li>Confirm Shift state.</li>
+<li>Re-check assignment values.</li>
+</ol>
+<h3 id="deep-checks_3">Deep checks<a class="headerlink" href="#deep-checks_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>test one control at a time on isolated target action</li>
+<li>remove overlapping mappings during diagnosis</li>
 </ul>
-</div>
-</div></div>
-<div class="col-md-9" role="main">
-<h1 id="troubleshooting">Troubleshooting</h1>
-<h3 id="connection-issues">Connection Issues</h3>
-<h4 id="device-not-detected-via-usb">Device Not Detected via USB</h4>
+<hr />
+<h2 id="5-network-issues">5) Network issues<a class="headerlink" href="#5-network-issues" title="Permanent link">&para;</a></h2>
+<h3 id="fast-checks_4">Fast checks<a class="headerlink" href="#fast-checks_4" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Check USB cable (use data cable, not charge-only)</li>
-<li>Try different USB port</li>
-<li>Restart the device</li>
-<li>Check Device Manager (Windows) or System Information (macOS)</li>
+<li>Verify IP + port on both ends.</li>
+<li>Verify same subnet.</li>
+<li>Verify firewall policy.</li>
 </ol>
-<h4 id="no-osc-communication">No OSC Communication</h4>
+<h3 id="deep-checks_4">Deep checks<a class="headerlink" href="#deep-checks_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>test direct link</li>
+<li>test with reduced network load</li>
+</ul>
+<hr />
+<h2 id="recovery-order-safe">Recovery order (safe)<a class="headerlink" href="#recovery-order-safe" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Verify network connection (check ETH indicator on display)</li>
-<li>Confirm IP addresses match between device and app</li>
-<li>Check firewall settings allow OSC ports</li>
-<li>Test with <code>/live/test</code> message</li>
+<li>Save state if possible</li>
+<li>Restart app</li>
+<li>Power cycle controller</li>
+<li>Re-validate first Song + critical controls</li>
+<li>Resume from known-safe transition point</li>
 </ol>
-<h4 id="midi-not-working">MIDI Not Working</h4>
-<ol>
-<li>Verify MIDI port selection in DAW</li>
-<li>Check ShowControl appears as MIDI device</li>
-<li>Send <code>/live/api/reload</code> to restart script</li>
-</ol>
-<h3 id="display-issues">Display Issues</h3>
-<h4 id="blank-display">Blank Display</h4>
-<ol>
-<li>Check TFT_LED pin connection</li>
-<li>Verify display initialization in logs</li>
-<li>Try power cycling the device</li>
-</ol>
-<h4 id="corrupted-display">Corrupted Display</h4>
-<ol>
-<li>May indicate SPI timing issues</li>
-<li>Check for interference with other USB devices</li>
-<li>Update firmware to latest version</li>
-</ol>
-<h3 id="configuration-issues">Configuration Issues</h3>
-<h4 id="settings-not-saving">Settings Not Saving</h4>
-<ol>
-<li>Verify filesystem is properly uploaded</li>
-<li>Check LittleFS initialization in logs</li>
-<li>Re-upload filesystem: <code>pio run --target uploadfs</code></li>
-</ol>
-<h4 id="json-errors">JSON Errors</h4>
-<ol>
-<li>Use <code>jsonManager.printDiagnostics()</code> for debugging</li>
-<li>Check for corrupted <code>data.json</code></li>
-<li>Reset to default configuration</li>
-</ol>
-<h3 id="log-monitoring">Log Monitoring</h3>
-<h4 id="serial-monitor">Serial Monitor</h4>
-<pre><code class="language-bash">pio device monitor --baud 115200
-</code></pre>
-<h4 id="enable-debug-output">Enable Debug Output</h4>
-<p>Debug modes are available in <code>config/consts.h</code>:
-- <code>DEBUG_SETUP</code> - Initialization logs
-- <code>DEBUG_ETHERNET</code> - Network logs
-- <code>DEBUG_DISPLAY</code> - Display logs</p>
-<h3 id="getting-support">Getting Support</h3>
-<ol>
-<li>Open an issue on GitHub</li>
-<li>Include firmware version and logs</li>
-<li>Describe steps to reproduce the problem</li>
-<li>Use <code>/live/test</code> to verify connectivity</li>
-</ol>
-<hr/>
-<h2 id="quick-reference">Quick Reference</h2>
-<h3 id="default-button-layout-user-mode-1">Default Button Layout (User Mode 1)</h3>
-<table>
-<thead>
-<tr>
-<th>Button</th>
-<th>Action</th>
-<th>Shifted</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Play/Stop</td>
-<td>Record</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Prev Marker</td>
-<td>Rewind</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Next Marker</td>
-<td>Fast Forward</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Prev Scene</td>
-<td>Prev Section</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Next Scene</td>
-<td>Next Section</td>
-</tr>
-</tbody>
-</table>
-<h3 id="keyboard-shortcuts-desktop-app">Keyboard Shortcuts (Desktop App)</h3>
-<table>
-<thead>
-<tr>
-<th>Shortcut</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl+Z</td>
-<td>Undo</td>
-</tr>
-<tr>
-<td>Ctrl+Y</td>
-<td>Redo</td>
-</tr>
-<tr>
-<td>Ctrl+S</td>
-<td>Save configuration</td>
-</tr>
-<tr>
-<td>Ctrl+O</td>
-<td>Load configuration</td>
-</tr>
-</tbody>
-</table>
-<h3 id="status-indicators">Status Indicators</h3>
-<table>
-<thead>
-<tr>
-<th>Indicator</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ETH (green)</td>
-<td>Network connected</td>
-</tr>
-<tr>
-<td>ETH (red)</td>
-<td>Network disconnected</td>
-</tr>
-<tr>
-<td>USB icon</td>
-<td>USB MIDI active</td>
-</tr>
-</tbody>
-</table>
-<hr/></div>
-</div>
-</div>
-<footer class="col-md-12">
-<hr/>
-<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ableset/" class="btn btn-neutral float-left" title="Using Ableset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../STYLEGUIDE/" class="btn btn-neutral float-right" title="Style Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-<script src="../js/base.js"></script>
-<div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ableset/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../STYLEGUIDE/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-<div class="modal-body">
-<table class="table">
-<thead>
-<tr>
-<th style="width: 20%;">Keys</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="help shortcut"><kbd>?</kbd></td>
-<td>Open this help</td>
-</tr>
-<tr>
-<td class="next shortcut"><kbd>n</kbd></td>
-<td>Next page</td>
-</tr>
-<tr>
-<td class="prev shortcut"><kbd>p</kbd></td>
-<td>Previous page</td>
-</tr>
-<tr>
-<td class="search shortcut"><kbd>s</kbd></td>
-<td>Search</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="modal-footer">
-</div>
-</div>
-</div>
-</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
 </body>
 </html>

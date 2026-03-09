@@ -1,71 +1,47 @@
-# Installation / connection
+# Installing and Connecting the ShowControl Controller
 
-## Goal
+## Software Installation
 
-Install the controller correctly and bring it online with a stable control path to your host/DAW.
+### Ableton Live Control Surface Script
+1. Unzip the script archive.
+2. Copy the folder into Ableton Live’s `Remote Scripts` directory (usually found in the installation folder or your user library).
+3. Restart Ableton Live to detect the new script.
 
-## Preconditions
+### ShowControl Application
+1. Download the `.dmg` file for the ShowControl app.
+2. Open the file and follow the instructions to install the application on your computer.
+3. Launch the app after installation.
 
-- Controller and host machine available
-- ShowControl app installed and launchable
-- If using Ableton integration: project and script available
-- Required cables available (USB-C and/or Ethernet, and power if needed)
+## Hardware Connection
 
----
+### USB Connection
 
-## 1) Physical installation
+- Connect the USB cable between the controller and your computer.
+- Open Ableton Live, go to Preferences, and add a Control Surface line: select “Show Control” and set the MIDI In and Out ports to “Show Control DAW”.
+- The controller will display a white SHCTRL icon and the number 1, indicating an active USB connection.
 
-- Place the controller on a stable surface with enough airflow.
-- Connect required cables (USB-C and/or Ethernet).
-- If using PoE, ensure the switch/injector is active.
-- Power on the controller.
+**Needed** : Show Control script
 
-### Verify
+### Ethernet Connection
 
-- screen initializes normally
-- no boot-loop behavior
-- cable links are physically secure
+- Connect the Ethernet cable between the controller and your network or directly to your computer.
+- You can power the controller either by connecting the USB-C port to a charger or computer, or by using a Power over Ethernet (PoE) injector or switch on your Ethernet cable.
+- On the controller, press and hold the encoder to access the Settings menu.
+- Set the IP address according to your network requirements (make sure the first three octets match your computer’s address).
+- On your computer, set the Ethernet port’s IPv4 address manually, using an address in the same subnet as the controller.
+- Launch the ShowControl app: it will automatically detect your device and establish the connection.
+- The SHCTRL icon on the controller will turn green and the number 1 will appear, indicating an active network connection.
+- Make sure the Show Control script is loaded in Ableton Live so the app can communicate with Live.
 
----
 
-## 2) Connection mode selection
+**Needed** : Show Control script + Show Control App
 
-Choose one primary path for operation:
+## If Installation or Connection Fails
 
-- **USB connection** (simple local setup)
-- **Ethernet connection** (networked setup)
+See the [Troubleshooting](troubleshooting.md) section for detailed solutions.
 
-### Verify
-
-- app shows expected connection status (USB/ETH)
-- chosen path remains stable for at least 1-2 minutes
-
----
-
-## 3) App and MIDI/DAW validation
-
-- Open ShowControl and confirm the controller is detected.
-- Confirm expected MIDI ports appear on the host machine.
-- If using Ableton/script, confirm script is loaded and responsive.
-
-### Verify
-
-- transport/control feedback responds as expected
-- no unexpected disconnects during basic actions
-
----
-
-## 4) Network validation (if Ethernet)
-
-- Confirm IP and port values in Settings.
-- Ensure controller and host are on the same subnet (or valid routed path).
-
-### Verify
-
-- connection remains stable during basic control actions
-
----
-
-## If installation/connection fails
-
-Go to [Troubleshooting](troubleshooting.md).
+> **Requirements**
+> - ShowControl controller and computer available
+> - ShowControl app installed and working
+> - Ableton Live project and script available (if using Ableton integration)
+> - Required cables (USB-C, Ethernet, power)
