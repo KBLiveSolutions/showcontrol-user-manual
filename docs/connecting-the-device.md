@@ -20,7 +20,8 @@
 - Open Ableton Live, go to Preferences, and add a Control Surface line: select “Show Control” and set the MIDI In and Out ports to “Show Control DAW”.
 - The controller will display a white SHCTRL icon and the number 1, indicating an active USB connection.
 
-**Needed** : Show Control script
+> **Required**
+> - ShowControl Control Surface script running in Live, with In and Out attached to **Show Control DAW** port
 
 ### Ethernet Connection
 
@@ -33,8 +34,11 @@
 - The SHCTRL icon on the controller will turn green and the number 1 will appear, indicating an active network connection.
 - Make sure the Show Control script is loaded in Ableton Live so the app can communicate with Live.
 
+> **Required**
+> - ShowControl Control Surface script running in Live
+> - ShowControl application running
 
-**Needed** : Show Control script + Show Control App
+
 
 ## If Installation or Connection Fails
 
