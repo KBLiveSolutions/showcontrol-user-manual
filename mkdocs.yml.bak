@@ -1,0 +1,19 @@
+site_name: Show Control Documentation
+site_description: Manual for Show Control
+site_author: KBLiveSolutions
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Installation / Connection: connecting-the-device.md
+  - Using Setlists: using-setlists.md
+  - Using User-defined controls: using-user-defined-controls.md
+  - Using Ableset: using-ableset.md
+  - Troubleshooting: troubleshooting.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3

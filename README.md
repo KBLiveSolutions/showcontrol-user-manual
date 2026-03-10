@@ -1,11 +1,20 @@
-# ShowControl User Manual (Dedicated Workspace)
+# ShowControl User Manual (Starlight)
 
-This folder is the dedicated manual workspace.
+This repository now uses Astro Starlight + starlight-theme-black.
 
-- Source docs: `docs/`
-- MkDocs config: `mkdocs.yml`
+## Local development
 
-This content is synchronized from:
-`showcontrol_app/assets/user-manual/`
+```bash
+npm install
+npm run dev
+```
 
-You can now edit the manual independently here.
+## Build
+
+```bash
+npm run build
+```
+
+## Deploy
+
+Deployment is handled automatically by GitHub Actions on push to `main`.
