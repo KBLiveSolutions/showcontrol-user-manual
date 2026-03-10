@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 import starlightThemeBlack from 'starlight-theme-black';
 
 export default defineConfig({
+  site: 'https://kblivesolutions.github.io',
+  base: '/showcontrol-user-manual',
   integrations: [
     starlight({
       title: 'ShowControl User Manual',
